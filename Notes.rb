@@ -86,14 +86,102 @@
 # puts [1, 2, 3].join.inspect                 # "123"
 # puts [1, 2, 3].join('-').inspect            # "1-2-3"
 
+# ----------------HASHES-------------------------
+#-- #creating hashes -- \
+# my_hash = 
+# {
+#     "this is a key" => "this is a value",
+#     :name => 'nolan',
+#     'array' => [1,2,3],
+#     'nested hash' => {}
+# }
+
+# my_hash_two = Hash.new #{}
+
+# puts my_hash["this is a key"]
+# puts my_hash[:name]
+# puts my_hash['array']
+# puts my_hash['nested hash']
+
+# puts my_hash_two
+
+# -----------Accessing Values-----------
+# shoes = 
+# {
+#     'summer' => 'sandal',
+#     'winter' => 'boots'
+# }
+
+# puts shoes ['winter'] # should output boots
+# puts shoes ['hiking'] # will not output
+
+# puts shoes ['summer', 'winter'] # will error
+# puts shoes ['summer'], ['winter'] # will error 2 arguments given one expected
+
+# puts shoes.fetch('summer') # should output sandels
+# puts shoes.fetch('hiking') # outputs error
+
+# puts shoes.fetch('summer', 'winter') # outputs sandels
 
 
+# -----------Adding & Changing Data-----------
+
+# puts shoes['summer'] = 'flip-flops'
+# puts shoes
+
+# -----------Removing Data-----------
+
+# shoes.delete('summer')
+# puts shoes
+
+# -----------Methods-----------
+
+# books = 
+# {
+#     'Harry Potter' => "J.K. Rowling",
+#     'Tom Sawyer' => "Mark Twain"   
+# }
+
+# puts books.keys
+# puts books.values
+
+# -----------Merging two hashes-----------
+
+# hash1 = 
+# {
+#     'a' => 100,
+#     'b' => 200
+# }
+
+# hash2 = 
+# {
+#     'c' => 300,
+#     'd' => 400
+# }
+
+# puts hash1.merge(hash2)
 
 
+# -----------Symbols as hashkeys-----------
 
+american_cars =
+{
+    :chevy => 'Corvette',
+    :ford => 'Mustang',
+    :dodge => 'Challenger'
+}
 
+japanese_cars =
+{
+    honda: 'Accord',
+    toyota: 'Tacoma',
+    nissan: 'Altima'
+}
 
+puts american_cars[:ford]
+puts japanese_cars[:toyota]
 
-
+puts american_cars.keys
+puts american_cars.values
 
 
